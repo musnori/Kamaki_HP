@@ -6,6 +6,7 @@ import Home from '@/pages/Home'
 import Products from '@/pages/Products'
 import Contact from '@/pages/Contact'
 import Resources from '@/pages/Resources'
+import Company from '@/pages/Company'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/company" element={<Company />} /> 
           <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resources" element={<Resources />} />

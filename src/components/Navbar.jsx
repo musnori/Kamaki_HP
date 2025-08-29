@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react'
 
 const navItems = [
   { to: '/', label: 'ホーム' },
+  { to: '/company', label: '会社案内' },  
   { to: '/products', label: '各種製品情報' },
   { to: '/contact', label: 'お問い合わせ' },
   { to: '/resources', label: '参考資料' },
@@ -30,9 +31,10 @@ export default function Navbar() {
     <div className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <nav className="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 shadow-soft" />
-          <span className="font-semibold tracking-tight">Kamaki Works</span>
-        </Link>
+  <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 shadow-soft" />
+  <span className="font-semibold tracking-tight">株式会社 Kamaki</span>
+</Link>
+
 
         <div className="hidden md:flex items-center gap-1">
           {navItems.map((n) => (

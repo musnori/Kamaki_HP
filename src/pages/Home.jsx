@@ -67,19 +67,24 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section title="アクセス" subtitle="所在地（仮）。実住所に差し替えてご利用ください。">
-        <div className="rounded-2xl overflow-hidden border bg-white shadow-soft">
-          <iframe
-            title="map"
-            width="100%"
-            height="360"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.957343!2d139.767125!3d35.681236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sja!2sjp!4v00000000000"
-            className="block"
-          />
-        </div>
-      </Section>
+      <Section title="アクセス" subtitle="所在地（兵庫県加古川市八幡町船町１１４番地）">
+  <div className="rounded-2xl overflow-hidden border bg-white shadow-soft">
+    <iframe
+      title="map"
+      width="100%"
+      height="360"
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3822.581876234293!2d134.909166!3d34.793392!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDQ3JzM0LjUiTiAxMzTCsDU0JzI3LjIiRQ!5e1!3m2!1sja!2sus!4v1756434319398!5m2!1sja!2sus"
+      style={{ border: 0 }}
+      allowFullScreen=""
+    />
+    <div className="p-4 text-sm text-neutral-700">
+      兵庫県加古川市八幡町船町１１４番地
+    </div>
+  </div>
+</Section>
+
     </div>
   )
 }

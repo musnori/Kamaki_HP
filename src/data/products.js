@@ -1,12 +1,19 @@
-export const CATEGORIES = ['切断', '研磨', '計測', '工具', 'その他']
+// カテゴリはシンプルに「鋏」「鎌」「パンフレット」に分ける例
+export const CATEGORIES = [
+  '鋏',
+  '鎌',
+  'パンフレット'
+]
 
 export const PRODUCTS = [
-  { id: 'p1', name: '高精度カッター A1', category: '切断', desc: '薄板材の高速・高精度切断に対応。低振動で仕上がりが綺麗。' },
-  { id: 'p2', name: 'ダイヤ砥石 G7', category: '研磨', desc: '耐摩耗性に優れた工業用ダイヤモンド砥石。長寿命設計。' },
-  { id: 'p3', name: 'デジタルノギス 150mm', category: '計測', desc: 'IP54 生活防水。見やすい大型ディスプレイで現場でも快適。' },
-  { id: 'p4', name: 'トルクレンチ Pro', category: '工具', desc: 'クリック式で正確なトルク管理。校正証明の発行にも対応。' },
-  { id: 'p5', name: '卓上バンドソー S2', category: '切断', desc: '樹脂〜アルミまで幅広く対応。安全カバー標準装備。' },
-  { id: 'p6', name: '表面粗さ計 R-Check', category: '計測', desc: 'Ra/Rz 対応のコンパクト機。USB Type-C 充電。' },
-  { id: 'p7', name: '万能バリ取りツール', category: '工具', desc: '曲線にも追従する替刃式。現場の定番アイテム。' },
-  { id: 'p8', name: '小型集塵ユニット', category: 'その他', desc: '卓上機とも接続できる 100V 集塵。HEPA フィルタ採用。' },
+  { id: 'p1', name: '高枝切鋏', category: '鋏', desc: '高所の枝を楽にカットできるロングリーチ鋏。' },
+  { id: 'p2', name: 'ロープ式高枝切鋏', category: '鋏', desc: 'ロープ引きで安全に高枝を切断できるタイプ。' },
+  { id: 'p3', name: '刈込鋏・伸縮式刈込鋏', category: '鋏', desc: '生垣や植木の整枝に最適な刈込鋏。伸縮式もあり。' },
+  { id: 'p4', name: '太枝切鋏', category: '鋏', desc: '太い枝を強力に切断できる鋏。' },
+  { id: 'p5', name: '高枝式太枝切鋏', category: '鋏', desc: '高枝でも太い枝を切れる強力モデル。' },
+  { id: 'p6', name: '剪定鋏', category: '鋏', desc: '果樹や庭木の剪定に必須のスタンダード鋏。' },
+  { id: 'p7', name: '採果鋏・植木鋏', category: '鋏', desc: '果実の収穫や植木手入れに適した鋏。' },
+  { id: 'p8', name: 'ロング剪定＆採集鋏', category: '鋏', desc: '長柄で高所の剪定や採集作業に便利。' },
+  { id: 'p9', name: '芝生鋏・押切・鎌', category: '鎌', desc: '芝刈りや草刈りに使える鋏・押切・鎌の各種。' },
+  { id: 'p10', name: '鋸・高枝鋸', category: '鎌', desc: '太枝や高枝の切断用鋸。' },
 ]
