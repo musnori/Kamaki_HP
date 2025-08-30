@@ -1,38 +1,45 @@
+// src/components/ProductCard.jsx
 import { motion } from 'framer-motion'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function ProductCard({ item }) {
-  const navigate = useNavigate()
+  const title = item.name || item.title
 
-  const cardInner = (
-    <motion.div
-      initial={{ opacity: 0, y: 8 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="rounded-2xl border bg-white shadow-soft overflow-hidden
-                 hover:shadow transition-shadow"
-      role={item.link ? 'button' : undefined}
-      onClick={() => item.link && navigate(item.link)}   // ← クリックで遷移（保険）
-      tabIndex={item.link ? 0 : -1}
-      onKeyDown={(e) => {
-        if (item.link && (e.key === 'Enter' || e.key === ' ')) navigate(item.link)
-      }}
-    >
-      <div className="aspect-video bg-gradient-to-br from-neutral-100 to-neutral-200" aria-hidden />
-      <div className="p-4">
-        <h3 className="font-semibold text-lg tracking-tight">{item.name}</h3>
-        <p className="text-sm text-neutral-600 mt-1 line-clamp-2">{item.desc}</p>
-        <div className="mt-3 text-xs inline-flex px-2 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-100">
-          {item.category}
+  return (
+    <Link to={item.link ?? '#'} className="group block" aria-label={title}>
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="rounded-2xl border bg-white shadow-soft overflow-hidden hover:shadow transition-shadow"
+      >
+        {/* 画像 */}
+        <div className="relative aspect-video bg-neutral-100">
+          {item.image ? (
+            <img
+              src={item.image}
+              alt={title}
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+          ) : (
+            <div className="absolute inset-0 bg-gradient-to-br from-neutral-100 to-neutral-200" />
+          )}
         </div>
-      </div>
-    </motion.div>
-  )
 
-  // Link でも囲む（どちらでも飛べるよう二重化）
-  return item.link ? (
-    <Link to={item.link} className="block">{cardInner}</Link>
-  ) : (
-    cardInner
+        {/* テキスト */}
+        <div className="p-4">
+          <h3 className="font-semibold text-lg tracking-tight">{title}</h3>
+          {item.desc && (
+            <p className="text-sm text-neutral-600 mt-1 line-clamp-2">{item.desc}</p>
+          )}
+          {item.category && (
+            <span className="mt-3 inline-flex px-2 py-1 text-xs rounded-full bg-brand-50 text-brand-700 border border-brand-100">
+              {item.category}
+            </span>
+          )}
+        </div>
+      </motion.div>
+    </Link>
   )
 }

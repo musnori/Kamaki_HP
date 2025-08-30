@@ -6,7 +6,7 @@ export const CATEGORIES = [
 ]
 
 export const PRODUCTS = [
-  { id: 'hp', name: '高枝切鋏', category: '鋏', desc: '高所の枝を楽にカットできるロングリーチ鋏。', link: '/products/high-branch' },
+  { id: 'hp', name: '高枝切鋏', category: '鋏', desc: '高所の枝を楽にカットできるロングリーチ鋏。', link: '/products/high-branch', image: '/images/takaedakiribasami.png',},
   { id: 'rhp', name: 'ロープ式高枝切鋏', category: '鋏', desc: 'ロープ引きで高所の枝を安全にカットできるタイプ。' , link: '/products/rope-high-branch' },
   { id: 'hs', name: '刈込鋏・伸縮式刈込鋏', category: '鋏', desc: '生垣の整枝に最適な刈込鋏と伸縮式モデル。' , link: '/products/hedge-shears' },
   { id: 'lp',  name: '太枝切鋏',           category: '鋏', desc: '太い枝もテコの力で強力切断。',             link: '/products/loppers' },
