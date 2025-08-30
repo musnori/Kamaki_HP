@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
+import Logo from '@/images/Kamaki.png'
 
 const navItems = [
   { to: '/', label: 'ホーム' },
@@ -31,9 +32,8 @@ export default function Navbar() {
     <div className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <nav className="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-  <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 shadow-soft" />
-  <span className="font-semibold tracking-tight">株式会社 Kamaki</span>
-</Link>
+          <img src={Logo} alt="Kamaki Logo" className="h-8 w-auto" />
+        </Link>
 
 
         <div className="hidden md:flex items-center gap-1">

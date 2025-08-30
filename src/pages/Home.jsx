@@ -1,3 +1,4 @@
+// pages/Home.jsx
 import Section from '@/components/Section'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
@@ -34,6 +35,8 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+
+            {/* Hero 装飾 */}
             <div className="relative">
               <div className="aspect-video rounded-3xl bg-gradient-to-br from-neutral-200 to-neutral-100 shadow-soft"/>
               <div className="absolute -bottom-4 -left-4 w-24 h-24 rounded-2xl bg-white border shadow-soft"/>
@@ -43,20 +46,10 @@ export default function Home() {
         </div>
       </section>
 
-      <Section title="取扱カテゴリー" subtitle="現場で使いやすい定番を中心に、用途別にご提案します。">
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-          {[{t:'切断'},{t:'研磨'},{t:'計測'},{t:'工具'}].map(({t}) => (
-            <div key={t} className="rounded-2xl border bg-white p-5 shadow-soft hover:shadow transition-shadow">
-              <h3 className="font-semibold">{t}</h3>
-              <p className="text-sm text-neutral-600 mt-1">代表的な製品群をピックアップ。</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
+      {/* ピックアップ製品 */}
       <Section title="ピックアップ製品">
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {PRODUCTS.slice(0,6).map((p) => (
+          {PRODUCTS.slice(0, 3).map((p) => (
             <ProductCard key={p.id} item={p} />
           ))}
         </div>
@@ -67,24 +60,24 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* アクセス */}
       <Section title="アクセス" subtitle="所在地（兵庫県加古川市八幡町船町１１４番地）">
-  <div className="rounded-2xl overflow-hidden border bg-white shadow-soft">
-    <iframe
-      title="map"
-      width="100%"
-      height="360"
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3822.581876234293!2d134.909166!3d34.793392!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDQ3JzM0LjUiTiAxMzTCsDU0JzI3LjIiRQ!5e1!3m2!1sja!2sus!4v1756434319398!5m2!1sja!2sus"
-      style={{ border: 0 }}
-      allowFullScreen=""
-    />
-    <div className="p-4 text-sm text-neutral-700">
-      兵庫県加古川市八幡町船町１１４番地
-    </div>
-  </div>
-</Section>
-
+        <div className="rounded-2xl overflow-hidden border bg-white shadow-soft">
+          <iframe
+            title="map"
+            width="100%"
+            height="360"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3822.581876234293!2d134.909166!3d34.793392!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDQ3JzM0LjUiTiAxMzTCsDU0JzI3LjIiRQ!5e1!3m2!1sja!2sus!4v1756434319398!5m2!1sja!2sus"
+            style={{ border: 0 }}
+            allowFullScreen=""
+          />
+          <div className="p-4 text-sm text-neutral-700">
+            兵庫県加古川市八幡町船町１１４番地
+          </div>
+        </div>
+      </Section>
     </div>
   )
 }
