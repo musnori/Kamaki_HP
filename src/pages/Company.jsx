@@ -44,6 +44,12 @@ const history = [
   { y: '2015（平成27）', t: '岸本柳平が代表取締役社長就任。岸本伊久男が会長就任。' },
 ]
 
+const metrics = [
+  { label: '創業', value: '1887年' },
+  { label: '法人設立', value: '1962年' },
+  { label: '従業員数', value: '20名' },
+  { label: '生産拠点', value: '2工場' },
+]
 
 export default function Company() {
   return (
@@ -63,14 +69,21 @@ export default function Company() {
 
       {/* 本文（サイドバーなし・1カラム） */}
       <div className="space-y-10">
+        <section className="rounded-3xl border bg-brand-50 p-6 md:p-8 shadow-soft">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">代表メッセージ</h2>
+          <p className="mt-3 text-neutral-700">
+            「道具は現場の生産性を左右する」—— 私たちは創業以来、刃物の切れ味と安全性にこだわり続けてきました。
+            使う人の声を形にし、日々の作業が少しでも楽になる製品づくりをこれからも続けていきます。
+          </p>
+        </section>
+
         {/* 会社情報 */}
         <section id="about" className="scroll-mt-24">
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight">会社情報</h2>
           <p className="mt-3 text-neutral-700">
-            Kamaki は、現場で使いやすい切断・研磨・計測・工具を提供するメーカーです。創業以来、品質と耐久性にこだわり、作業効率を高める製品群を開発してきました。
+            Kamaki は、園芸・農工具の製造販売を行うメーカーです。創業以来、品質と耐久性にこだわり、現場の作業効率を高める製品群を開発してきました。
           </p>
 
-          {/* 主要ハイライト */}
           <div className="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               ['主要製品', '高枝切鋏／鋸／剪定工具 ほか'],
@@ -85,6 +98,40 @@ export default function Company() {
           </div>
         </section>
 
+        {/* 事業内容 */}
+        <section id="business" className="scroll-mt-24">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">事業内容</h2>
+          <div className="mt-4 grid md:grid-cols-2 gap-6">
+            <div className="rounded-2xl border bg-white p-6 shadow-soft">
+              <h3 className="text-lg font-semibold">製品づくり</h3>
+              <ul className="mt-3 space-y-2 text-sm text-neutral-700 list-disc list-inside">
+                <li>刃物の切れ味・耐久性を高める熱処理技術</li>
+                <li>高所作業・安全性を考慮した製品設計</li>
+                <li>OEM・小ロットの製品相談に対応</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl border bg-white p-6 shadow-soft">
+              <h3 className="text-lg font-semibold">サポート体制</h3>
+              <ul className="mt-3 space-y-2 text-sm text-neutral-700 list-disc list-inside">
+                <li>用途に合わせた製品選定・導入相談</li>
+                <li>カタログ・取扱説明書の提供</li>
+                <li>修理・メンテナンスの相談窓口</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-6 rounded-2xl border bg-neutral-50 p-6">
+            <p className="text-sm font-semibold text-neutral-700">製品提供の流れ</p>
+            <div className="mt-3 grid md:grid-cols-3 gap-4 text-sm text-neutral-600">
+              {['課題ヒアリング', '製品提案・製造', '納品・導入サポート'].map((step, index) => (
+                <div key={step} className="rounded-xl border bg-white px-4 py-3 shadow-soft">
+                  <p className="text-xs text-neutral-500">Step {index + 1}</p>
+                  <p className="font-medium text-neutral-800">{step}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* 企業理念 */}
         <section id="philosophy" className="scroll-mt-24">
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight">企業理念</h2>
@@ -92,6 +139,19 @@ export default function Company() {
             <p className="text-neutral-700">
               「道具の基本性能を磨き続け、現場に安心と生産性を届ける」—— Kamaki は現場目線の改良を積み重ね、長く使える品質で社会に貢献します。
             </p>
+          </div>
+        </section>
+
+        {/* 数字で見る */}
+        <section id="metrics" className="scroll-mt-24">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">数字で見るKamaki</h2>
+          <div className="mt-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {metrics.map((metric) => (
+              <div key={metric.label} className="rounded-2xl border bg-white p-5 text-center shadow-soft">
+                <p className="text-xs uppercase tracking-widest text-neutral-500">{metric.label}</p>
+                <p className="mt-2 text-2xl font-semibold text-brand-700">{metric.value}</p>
+              </div>
+            ))}
           </div>
         </section>
 
