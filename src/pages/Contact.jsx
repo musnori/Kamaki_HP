@@ -1,71 +1,61 @@
 import { useState } from 'react'
 import Section from '@/components/Section'
 
-const TABS = [
-  { key: 'inquiry', label: 'お問い合わせ' },
-  { key: 'purchase', label: '購入のご相談' },
-  { key: 'repair', label: '修理のご相談' },
-]
-
 export default function Contact() {
-  const [tab, setTab] = useState('inquiry')
+  const [submitted, setSubmitted] = useState(false)
 
   return (
-    <Section title="お問い合わせ" subtitle="用途や状況に合わせてタブを切り替えてください。">
-      <div className="mb-6 flex flex-wrap gap-2">
-        {TABS.map((t) => (
-          <button key={t.key}
-            onClick={() => setTab(t.key)}
-            className={`px-4 py-2 rounded-xl border ${tab===t.key ? 'bg-brand-600 text-white border-brand-600' : 'bg-white hover:bg-neutral-50'}`}
-          >{t.label}</button>
-        ))}
+    <Section title="お問い合わせ" subtitle="無理な営業は行いません。お気軽にご相談ください。">
+      <div className="mb-8 rounded-2xl border bg-brand-50 p-5 text-sm text-brand-900">
+        <p className="font-semibold">ご相談内容に応じて、最短1営業日以内にご返信します。</p>
+        <p className="mt-1 text-neutral-700">製品の選定・在庫確認・資料請求など、気軽にご相談ください。</p>
       </div>
 
+      {submitted && (
+        <div className="mb-6 rounded-2xl border border-brand-200 bg-brand-50 px-4 py-3 text-sm text-brand-900">
+          送信ありがとうございました。担当者より2営業日以内にご連絡いたします。追加のご要望があれば追ってご返信ください。
+        </div>
+      )}
+
       <form
-        onSubmit={(e) => { e.preventDefault(); alert('送信内容を受け付けました。メール送信ロジックを実装してください。') }}
+        onSubmit={(e) => {
+          e.preventDefault()
+          setSubmitted(true)
+        }}
         className="grid gap-4 md:grid-cols-2"
       >
-        <div className="grid gap-2">
-          <label className="text-sm">会社名 / お名前</label>
-          <input required className="rounded-xl border px-4 py-2" placeholder="例）株式会社〇〇 / 山田太郎" />
+        <div className="grid gap-2 md:col-span-2">
+          <label className="text-sm">お問い合わせ種別</label>
+          <select className="rounded-xl border px-4 py-2">
+            <option>製品のご相談</option>
+            <option>購入・在庫の確認</option>
+            <option>修理・メンテナンス</option>
+            <option>資料請求</option>
+            <option>その他</option>
+          </select>
         </div>
         <div className="grid gap-2">
+          <label className="text-sm">会社名（任意）</label>
+          <input className="rounded-xl border px-4 py-2" placeholder="例）株式会社〇〇" />
+        </div>
+        <div className="grid gap-2">
+          <label className="text-sm">お名前</label>
+          <input required className="rounded-xl border px-4 py-2" placeholder="例）山田 太郎" />
+        </div>
+        <div className="grid gap-2 md:col-span-2">
           <label className="text-sm">メールアドレス</label>
           <input type="email" required className="rounded-xl border px-4 py-2" placeholder="example@mail.com" />
         </div>
         <div className="grid gap-2 md:col-span-2">
-          <label className="text-sm">件名</label>
-          <input className="rounded-xl border px-4 py-2" placeholder="お問い合わせの件名" />
+          <label className="text-sm">ご相談内容</label>
+          <textarea required rows={6} className="rounded-xl border px-4 py-2" placeholder="具体的なご相談内容をご記入ください。" />
         </div>
 
-        {tab === 'purchase' && (
-          <div className="grid gap-2 md:col-span-2">
-            <label className="text-sm">ご希望の製品・数量</label>
-            <textarea rows={3} className="rounded-xl border px-4 py-2" placeholder="例）高精度カッターA1を3台、ダイヤ砥石G7を10枚 など" />
-          </div>
-        )}
-
-        {tab === 'repair' && (
-          <>
-            <div className="grid gap-2">
-              <label className="text-sm">製品名 / 型番</label>
-              <input className="rounded-xl border px-4 py-2" placeholder="例）高精度カッターA1 / A1-100" />
-            </div>
-            <div className="grid gap-2">
-              <label className="text-sm">購入時期</label>
-              <input className="rounded-xl border px-4 py-2" placeholder="例）2024年5月頃" />
-            </div>
-          </>
-        )}
-
-        <div className="grid gap-2 md:col-span-2">
-          <label className="text-sm">内容</label>
-          <textarea required rows={8} className="rounded-xl border px-4 py-2" placeholder="具体的なご相談内容をご記入ください。" />
-        </div>
-
-        <div className="md:col-span-2 flex items-center justify-between gap-4">
+        <div className="md:col-span-2 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <p className="text-xs text-neutral-500">※ 送信ボタンはダミーです。Formspree / EmailJS / 自社API 等に差し替えてください。</p>
-          <button className="inline-flex items-center gap-2 rounded-xl bg-brand-600 text-white px-5 py-2 hover:bg-brand-700">送信する</button>
+          <button className="inline-flex items-center justify-center rounded-xl bg-brand-600 text-white px-6 py-2 hover:bg-brand-700">
+            送信する
+          </button>
         </div>
       </form>
     </Section>
