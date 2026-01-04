@@ -10,25 +10,25 @@ export default function Section({
   className = ""         // 追加のクラス用
 }) {
   return (
-    <section 
-      id={id} 
-      // シンプルな記述に変更しました
-      className={`py-16 md:py-24 ${bg} ${className}`}
+    <section
+      id={id}
+      // 余白を削減して、より引き締まったデザインに
+      className={`py-10 md:py-16 ${bg} ${className}`}
     >
       <div className="mx-auto max-w-6xl px-4">
         {(title || subtitle) && (
-          <header className="mb-10 md:mb-14 text-center md:text-left">
+          <header className="mb-8 md:mb-10 text-center md:text-left">
             {title && (
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-neutral-900">
                 {title}
               </h2>
             )}
             {subtitle && (
-              <p className="mt-3 max-w-2xl text-lg text-neutral-600 md:text-xl">
+              <p className="mt-2 max-w-2xl text-base text-neutral-600 md:text-lg">
                 {subtitle}
               </p>
             )}
-            <div className="mt-6 h-1 w-16 bg-brand-600 rounded-full mx-auto md:mx-0 opacity-20"/>
+            <div className="mt-4 h-1 w-12 bg-brand-600 rounded-full mx-auto md:mx-0 opacity-20"/>
           </header>
         )}
         {children}
