@@ -49,13 +49,13 @@ export default function Company() {
   return (
     <div className="bg-white">
       {/* Header */}
-      <div className="bg-neutral-50 py-12 border-b border-neutral-100">
+      <div className="bg-neutral-50 py-10 border-b border-neutral-100">
         <div className="mx-auto max-w-5xl px-4">
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-            <img src={Logo} alt="Kamaki Logo" className="h-20 w-20 rounded-2xl bg-white p-2 shadow-sm ring-1 ring-neutral-200" />
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+            <img src={Logo} alt="Kamaki Logo" className="h-16 w-16 rounded-2xl bg-white p-2 shadow-sm ring-1 ring-neutral-200" />
             <div>
-              <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900">会社概要</h1>
-              <p className="mt-2 text-neutral-600 text-lg">
+              <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-neutral-900">会社概要</h1>
+              <p className="mt-1.5 text-neutral-600 text-base md:text-lg">
                 130年を超える歴史と技術。兵庫・播州から世界へ。
               </p>
             </div>
@@ -63,15 +63,15 @@ export default function Company() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-5xl px-4 py-12 md:py-20 space-y-24">
+      <div className="mx-auto max-w-5xl px-4 py-10 md:py-16 space-y-16">
         
         {/* 代表メッセージ */}
-        <section className="relative overflow-hidden rounded-3xl bg-brand-900 px-6 py-12 md:px-12 md:py-16 text-center text-white shadow-xl">
-           <div className="absolute top-0 left-0 h-32 w-32 -translate-x-10 -translate-y-10 rounded-full bg-white/10 blur-3xl"/>
-           <div className="absolute bottom-0 right-0 h-40 w-40 translate-x-10 translate-y-10 rounded-full bg-brand-500/20 blur-3xl"/>
-           
-           <h2 className="relative text-2xl md:text-3xl font-bold tracking-tight">「道具は現場の生産性を左右する」</h2>
-           <p className="relative mt-6 text-brand-100 leading-loose max-w-3xl mx-auto text-lg">
+        <section className="relative overflow-hidden rounded-2xl bg-brand-900 px-6 py-10 md:px-10 md:py-12 text-center text-white shadow-xl">
+           <div className="absolute top-0 left-0 h-28 w-28 -translate-x-10 -translate-y-10 rounded-full bg-white/10 blur-3xl"/>
+           <div className="absolute bottom-0 right-0 h-32 w-32 translate-x-10 translate-y-10 rounded-full bg-brand-500/20 blur-3xl"/>
+
+           <h2 className="relative text-xl md:text-2xl font-bold tracking-tight">「道具は現場の生産性を左右する」</h2>
+           <p className="relative mt-4 text-brand-100 leading-relaxed max-w-3xl mx-auto text-base md:text-lg">
              私たちは創業以来、刃物の切れ味と安全性にこだわり続けてきました。<br className="hidden md:block"/>
              使う人の声を形にし、日々の作業が少しでも楽になる製品づくりを<br className="hidden md:block"/>
              これからも続けていきます。
@@ -79,21 +79,21 @@ export default function Company() {
         </section>
 
         {/* 会社データ */}
-        <section id="facts" className="grid md:grid-cols-12 gap-10">
+        <section id="facts" className="grid md:grid-cols-12 gap-8">
           <div className="md:col-span-4">
-            <h2 className="text-2xl font-bold text-neutral-900 mb-4 sticky top-24">基本情報</h2>
-            <p className="text-neutral-600">
+            <h2 className="text-xl font-bold text-neutral-900 mb-3 sticky top-24">基本情報</h2>
+            <p className="text-sm text-neutral-600">
               本社工場および第二工場にて、一貫生産体制を整えています。
             </p>
           </div>
           <div className="md:col-span-8">
             <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm">
-              <table className="w-full text-sm md:text-base">
+              <table className="w-full text-sm">
                 <tbody className="divide-y divide-neutral-100">
                   {facts.map((row) => (
                     <tr key={row.k} className="group hover:bg-neutral-50 transition-colors">
-                      <th className="w-1/3 px-6 py-4 text-left font-semibold text-neutral-500 bg-neutral-50/50 group-hover:bg-neutral-100/50">{row.k}</th>
-                      <td className="px-6 py-4 text-neutral-900 font-medium">
+                      <th className="w-1/3 px-4 py-3 text-left font-semibold text-neutral-500 bg-neutral-50/50 group-hover:bg-neutral-100/50">{row.k}</th>
+                      <td className="px-4 py-3 text-neutral-900 font-medium">
                         {row.href ? (
                           <a href={row.href} className="text-brand-700 hover:underline flex items-center gap-2">
                             {row.k === '電話' && <Phone size={16}/>}
@@ -112,25 +112,25 @@ export default function Company() {
         </section>
 
         {/* 沿革（タイムライン） */}
-        <section id="history" className="grid md:grid-cols-12 gap-10">
+        <section id="history" className="grid md:grid-cols-12 gap-8">
           <div className="md:col-span-4">
-            <h2 className="text-2xl font-bold text-neutral-900 mb-4 sticky top-24">沿革</h2>
-            <p className="text-neutral-600">
+            <h2 className="text-xl font-bold text-neutral-900 mb-3 sticky top-24">沿革</h2>
+            <p className="text-sm text-neutral-600">
               明治20年の鎌製造から始まり、時代の変化と共に園芸工具メーカーへと進化してきました。
             </p>
           </div>
           <div className="md:col-span-8">
-            <div className="border-l-2 border-brand-100 ml-3 space-y-10 py-2">
+            <div className="border-l-2 border-brand-100 ml-2 space-y-8 py-2">
               {history.map((h, i) => (
-                <div key={i} className="relative pl-8 md:pl-12 group">
+                <div key={i} className="relative pl-6 md:pl-10 group">
                   {/* Timeline Dot */}
                   <div className="absolute -left-[9px] top-1 h-4 w-4 rounded-full border-4 border-white bg-brand-300 group-hover:bg-brand-600 transition-colors shadow-sm" />
-                  
-                  <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-4 mb-2">
-                    <span className="text-2xl font-bold text-brand-800 tabular-nums">{h.y}</span>
-                    <span className="text-sm font-semibold text-neutral-500 bg-neutral-100 px-2 py-0.5 rounded-full">{h.sub}</span>
+
+                  <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3 mb-1.5">
+                    <span className="text-xl font-bold text-brand-800 tabular-nums">{h.y}</span>
+                    <span className="text-xs font-semibold text-neutral-500 bg-neutral-100 px-2 py-0.5 rounded-full">{h.sub}</span>
                   </div>
-                  <p className="text-neutral-700 leading-relaxed group-hover:text-neutral-900 transition-colors">
+                  <p className="text-sm text-neutral-700 leading-relaxed group-hover:text-neutral-900 transition-colors">
                     {h.t}
                   </p>
                 </div>
@@ -140,8 +140,8 @@ export default function Company() {
         </section>
 
         {/* アクセス */}
-        <section id="access" className="rounded-3xl border border-neutral-200 bg-neutral-50 p-2">
-          <div className="rounded-2xl overflow-hidden shadow-sm h-[400px] relative group">
+        <section id="access" className="rounded-2xl border border-neutral-200 bg-neutral-50 p-2">
+          <div className="rounded-xl overflow-hidden shadow-sm h-[350px] relative group">
             <iframe
               title="map"
               width="100%"
@@ -151,17 +151,17 @@ export default function Company() {
               style={{ border: 0 }}
               className="grayscale group-hover:grayscale-0 transition-all duration-500"
             />
-             <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur p-4 rounded-xl border border-white/50 shadow-sm flex items-start gap-3">
-               <MapPin className="text-brand-600 shrink-0 mt-1" />
+             <div className="absolute bottom-3 left-3 right-3 bg-white/90 backdrop-blur p-3 rounded-xl border border-white/50 shadow-sm flex items-start gap-2">
+               <MapPin className="text-brand-600 shrink-0 mt-0.5" size={18} />
                <div>
-                 <p className="font-bold text-neutral-900">本社工場</p>
-                 <p className="text-sm text-neutral-600">兵庫県加古川市八幡町船町１１４番地</p>
+                 <p className="font-bold text-sm text-neutral-900">本社工場</p>
+                 <p className="text-xs text-neutral-600">兵庫県加古川市八幡町船町１１４番地</p>
                </div>
-               <a 
-                 href="https://maps.google.com/maps?q=兵庫県加古川市八幡町船町１１４番地" 
-                 target="_blank" 
+               <a
+                 href="https://maps.google.com/maps?q=兵庫県加古川市八幡町船町１１４番地"
+                 target="_blank"
                  rel="noreferrer"
-                 className="ml-auto text-xs bg-brand-600 text-white px-3 py-2 rounded-lg hover:bg-brand-700 transition-colors"
+                 className="ml-auto text-xs bg-brand-600 text-white px-2.5 py-1.5 rounded-lg hover:bg-brand-700 transition-colors"
                >
                  GoogleMap
                </a>

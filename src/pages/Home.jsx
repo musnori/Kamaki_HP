@@ -12,48 +12,48 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-100/50 via-white to-transparent"/>
-        <div className="mx-auto max-w-6xl px-4 py-16 md:py-28">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="mx-auto max-w-6xl px-4 py-12 md:py-20">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
             <div className="max-w-xl">
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <span className="inline-block px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-bold tracking-wide mb-4">
+                <span className="inline-block px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-bold tracking-wide mb-3">
                   SINCE 1887
                 </span>
-                <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight text-neutral-900">
+                <h1 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight text-neutral-900">
                   プロが選ぶ、<br />
                   <span className="text-brand-600">確かな切れ味。</span>
                 </h1>
-                <p className="mt-6 text-neutral-600 text-lg leading-relaxed">
+                <p className="mt-4 text-neutral-600 text-base md:text-lg leading-relaxed">
                   兵庫県加古川市から世界へ。創業130年を超える園芸刃物メーカー「KAMAKI」は、現場の声を形にした高枝切鋏や剪定工具をお届けします。
                 </p>
-                
-                <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                  <Link to="/products" className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 text-white px-8 py-3.5 font-medium shadow-lg shadow-brand-600/20 hover:bg-brand-700 hover:translate-y-[-2px] transition-all">
+
+                <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                  <Link to="/products" className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 text-white px-6 py-3 font-medium shadow-lg shadow-brand-600/20 hover:bg-brand-700 hover:translate-y-[-2px] transition-all">
                     製品一覧を見る <ArrowRight size={18}/>
                   </Link>
-                  <Link to="/contact" className="inline-flex items-center justify-center gap-2 rounded-xl border border-neutral-200 bg-white px-8 py-3.5 font-medium text-neutral-700 hover:bg-neutral-50 hover:border-neutral-300 transition-all">
+                  <Link to="/contact" className="inline-flex items-center justify-center gap-2 rounded-xl border border-neutral-200 bg-white px-6 py-3 font-medium text-neutral-700 hover:bg-neutral-50 hover:border-neutral-300 transition-all">
                     お問い合わせ
                   </Link>
                 </div>
-                
-                <div className="mt-8 flex items-center gap-6 text-sm text-neutral-500 font-medium">
-                  <span className="flex items-center gap-2"><ShieldCheck size={16} className="text-brand-600"/> OEM/小ロット対応</span>
-                  <span className="flex items-center gap-2"><MapPin size={16} className="text-brand-600"/> 全国配送・サポート</span>
+
+                <div className="mt-6 flex items-center gap-4 text-xs md:text-sm text-neutral-500 font-medium">
+                  <span className="flex items-center gap-1.5"><ShieldCheck size={16} className="text-brand-600"/> OEM/小ロット対応</span>
+                  <span className="flex items-center gap-1.5"><MapPin size={16} className="text-brand-600"/> 全国配送・サポート</span>
                 </div>
               </motion.div>
             </div>
 
             <div className="relative hidden md:block">
               {/* Decorative Elements */}
-              <div className="absolute top-0 right-0 -z-10 h-[400px] w-[400px] rounded-full bg-brand-50 blur-3xl opacity-50"/>
-              <div className="relative aspect-[4/3] rounded-3xl bg-gradient-to-br from-neutral-100 to-white border border-white shadow-2xl p-2">
-                <div className="h-full w-full rounded-2xl bg-neutral-200 overflow-hidden relative">
+              <div className="absolute top-0 right-0 -z-10 h-[300px] w-[300px] rounded-full bg-brand-50 blur-3xl opacity-50"/>
+              <div className="relative aspect-square rounded-2xl bg-gradient-to-br from-neutral-100 to-white border border-white shadow-xl p-2">
+                <div className="h-full w-full rounded-xl bg-neutral-200 overflow-hidden relative">
                    {/* ここにメインビジュアル画像を入れてください */}
-                   <div className="absolute inset-0 flex items-center justify-center text-neutral-400">
+                   <div className="absolute inset-0 flex items-center justify-center text-neutral-400 text-sm">
                      Product Image Area
                    </div>
                 </div>
@@ -65,7 +65,7 @@ export default function Home() {
 
       {/* 強み Section */}
       <Section title="KAMAKIの強み" subtitle="現場の「困った」を解決し続けて1世紀。">
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-5">
           {[
             {
               icon: ShieldCheck,
@@ -85,12 +85,12 @@ export default function Home() {
           ].map((item, i) => {
             const Icon = item.icon
             return (
-              <div key={i} className="group rounded-2xl border border-neutral-100 bg-white p-8 shadow-sm hover:shadow-md transition-shadow">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600 group-hover:bg-brand-600 group-hover:text-white transition-colors">
-                  <Icon size={24} />
+              <div key={i} className="group rounded-2xl border border-neutral-100 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand-600 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                  <Icon size={22} />
                 </div>
-                <h3 className="text-xl font-bold text-neutral-900">{item.title}</h3>
-                <p className="mt-3 text-neutral-600 leading-relaxed">{item.body}</p>
+                <h3 className="text-lg font-bold text-neutral-900">{item.title}</h3>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{item.body}</p>
               </div>
             )
           })}
@@ -99,7 +99,7 @@ export default function Home() {
 
       {/* 目的別ナビゲーション (カードデザイン改善) */}
       <Section title="目的から探す" bg="bg-white">
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-5">
           {[
             {
               title: '製品を探す',
@@ -123,10 +123,10 @@ export default function Home() {
               text: 'text-orange-900'
             },
           ].map((item) => (
-            <Link key={item.title} to={item.link} className="group relative overflow-hidden rounded-2xl border border-neutral-100 bg-white p-6 shadow-sm hover:border-brand-200 hover:shadow-md transition-all">
-              <div className={`absolute top-0 right-0 -mt-4 -mr-4 h-24 w-24 rounded-full ${item.bg} opacity-50 group-hover:scale-150 transition-transform duration-500`}/>
-              <h3 className="relative text-xl font-bold text-neutral-900">{item.title}</h3>
-              <p className="relative mt-2 text-sm text-neutral-600 mb-6">{item.desc}</p>
+            <Link key={item.title} to={item.link} className="group relative overflow-hidden rounded-2xl border border-neutral-100 bg-white p-5 shadow-sm hover:border-brand-200 hover:shadow-md transition-all">
+              <div className={`absolute top-0 right-0 -mt-4 -mr-4 h-20 w-20 rounded-full ${item.bg} opacity-50 group-hover:scale-150 transition-transform duration-500`}/>
+              <h3 className="relative text-lg font-bold text-neutral-900">{item.title}</h3>
+              <p className="relative mt-1.5 text-sm text-neutral-600 mb-4">{item.desc}</p>
               <div className="relative flex items-center text-sm font-semibold text-brand-600 group-hover:translate-x-1 transition-transform">
                 詳細を見る <ChevronRight size={16} />
               </div>
@@ -137,13 +137,13 @@ export default function Home() {
 
       {/* ピックアップ製品 */}
       <Section title="ピックアップ製品">
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
           {PRODUCTS.slice(0, 3).map((p) => (
             <ProductCard key={p.id} item={p} />
           ))}
         </div>
-        <div className="mt-10 text-center">
-          <Link to="/products" className="inline-flex items-center gap-2 rounded-full border border-neutral-300 px-6 py-2.5 text-sm font-medium hover:bg-neutral-50 hover:border-neutral-400 transition-colors">
+        <div className="mt-8 text-center">
+          <Link to="/products" className="inline-flex items-center gap-2 rounded-full border border-neutral-300 px-5 py-2 text-sm font-medium hover:bg-neutral-50 hover:border-neutral-400 transition-colors">
             製品カタログをすべて見る <ArrowRight size={16}/>
           </Link>
         </div>
