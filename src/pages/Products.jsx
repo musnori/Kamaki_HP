@@ -22,10 +22,10 @@ export default function Products() {
       <Section title="製品一覧" subtitle="用途や作業内容に合わせて、最適なKAMAKI製品をお選びください。">
         
         {/* 選び方ガイド */}
-        <div className="mb-8 overflow-hidden rounded-2xl bg-white border border-brand-100 shadow-sm">
-          <div className="bg-brand-50/50 px-5 py-3 border-b border-brand-100">
-            <h3 className="flex items-center gap-2 font-bold text-sm text-brand-900">
-              <CheckCircle2 size={18} className="text-brand-600"/> 選び方のポイント
+        <div className="mb-8 overflow-hidden rounded-2xl bg-white border border-red-100 shadow-sm">
+          <div className="bg-red-50/50 px-5 py-3 border-b border-red-100">
+            <h3 className="flex items-center gap-2 font-bold text-sm text-red-900">
+              <CheckCircle2 size={18} className="text-red-600"/> 選び方のポイント
             </h3>
           </div>
           <div className="p-5 grid md:grid-cols-3 gap-5 text-sm text-neutral-700">
@@ -54,7 +54,7 @@ export default function Products() {
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
                 placeholder="キーワード検索（例：高枝、伸縮、太枝...）"
-                className="w-full rounded-lg border border-neutral-300 bg-white pl-10 pr-3 py-2 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all"
+                className="w-full rounded-lg border border-neutral-300 bg-white pl-10 pr-3 py-2 text-sm focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all"
               />
             </div>
             <div className="relative md:col-span-4">
@@ -62,7 +62,7 @@ export default function Products() {
               <select
                 value={cat}
                 onChange={(e) => setCat(e.target.value)}
-                className="w-full appearance-none rounded-lg border border-neutral-300 bg-white pl-9 pr-8 py-2 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all cursor-pointer"
+                className="w-full appearance-none rounded-lg border border-neutral-300 bg-white pl-9 pr-8 py-2 text-sm focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all cursor-pointer"
               >
                 <option>すべて</option>
                 {CATEGORIES.map((c) => <option key={c}>{c}</option>)}
@@ -82,7 +82,7 @@ export default function Products() {
             <p className="text-sm mt-1">キーワードを変更するか、カテゴリを「すべて」に戻してお試しください。</p>
             <button
               onClick={() => {setQ(''); setCat('すべて')}}
-              className="mt-5 text-brand-600 hover:underline font-medium text-sm"
+              className="mt-5 text-red-600 hover:underline font-medium text-sm"
             >
               条件をリセット
             </button>

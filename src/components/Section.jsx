@@ -28,7 +28,7 @@ export default function Section({
                 {subtitle}
               </p>
             )}
-            <div className="mt-4 h-1 w-12 bg-brand-600 rounded-full mx-auto md:mx-0 opacity-20"/>
+            <div className="mt-4 h-1 w-12 bg-red-600 rounded-full mx-auto md:mx-0 opacity-30"/>
           </header>
         )}
         {children}

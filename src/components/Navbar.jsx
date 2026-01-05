@@ -41,9 +41,9 @@ export default function Navbar() {
               to={n.to}
               className={({ isActive }) =>
                 `px-4 py-2 rounded-full text-[15px] font-medium transition-all duration-200 ${
-                  isActive 
-                    ? 'bg-brand-50 text-brand-700' 
-                    : 'text-neutral-600 hover:text-brand-600 hover:bg-neutral-50'
+                  isActive
+                    ? 'bg-red-50 text-red-700'
+                    : 'text-neutral-600 hover:text-red-600 hover:bg-neutral-50'
                 }`
               }
             >
@@ -54,7 +54,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-xl bg-neutral-50 text-neutral-600 hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-brand-500/20"
+          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-xl bg-neutral-50 text-neutral-600 hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-red-500/20"
           aria-label="メニューを開く"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -76,8 +76,8 @@ export default function Navbar() {
               to={n.to}
               className={({ isActive }) =>
                 `block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
-                  isActive 
-                    ? 'bg-brand-50 text-brand-700' 
+                  isActive
+                    ? 'bg-red-50 text-red-700'
                     : 'text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900'
                 }`
               }

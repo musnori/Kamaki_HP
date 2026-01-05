@@ -66,12 +66,12 @@ export default function Company() {
       <div className="mx-auto max-w-5xl px-4 py-10 md:py-16 space-y-16">
         
         {/* 代表メッセージ */}
-        <section className="relative overflow-hidden rounded-2xl bg-brand-900 px-6 py-10 md:px-10 md:py-12 text-center text-white shadow-xl">
+        <section className="relative overflow-hidden rounded-2xl bg-neutral-900 px-6 py-10 md:px-10 md:py-12 text-center text-white shadow-xl">
            <div className="absolute top-0 left-0 h-28 w-28 -translate-x-10 -translate-y-10 rounded-full bg-white/10 blur-3xl"/>
-           <div className="absolute bottom-0 right-0 h-32 w-32 translate-x-10 translate-y-10 rounded-full bg-brand-500/20 blur-3xl"/>
+           <div className="absolute bottom-0 right-0 h-32 w-32 translate-x-10 translate-y-10 rounded-full bg-red-500/20 blur-3xl"/>
 
            <h2 className="relative text-xl md:text-2xl font-bold tracking-tight">「道具は現場の生産性を左右する」</h2>
-           <p className="relative mt-4 text-brand-100 leading-relaxed max-w-3xl mx-auto text-base md:text-lg">
+           <p className="relative mt-4 text-neutral-300 leading-relaxed max-w-3xl mx-auto text-base md:text-lg">
              私たちは創業以来、刃物の切れ味と安全性にこだわり続けてきました。<br className="hidden md:block"/>
              使う人の声を形にし、日々の作業が少しでも楽になる製品づくりを<br className="hidden md:block"/>
              これからも続けていきます。
@@ -95,7 +95,7 @@ export default function Company() {
                       <th className="w-1/3 px-4 py-3 text-left font-semibold text-neutral-500 bg-neutral-50/50 group-hover:bg-neutral-100/50">{row.k}</th>
                       <td className="px-4 py-3 text-neutral-900 font-medium">
                         {row.href ? (
-                          <a href={row.href} className="text-brand-700 hover:underline flex items-center gap-2">
+                          <a href={row.href} className="text-red-700 hover:underline flex items-center gap-2">
                             {row.k === '電話' && <Phone size={16}/>}
                             {row.v}
                           </a>
@@ -120,14 +120,14 @@ export default function Company() {
             </p>
           </div>
           <div className="md:col-span-8">
-            <div className="border-l-2 border-brand-100 ml-2 space-y-8 py-2">
+            <div className="border-l-2 border-red-100 ml-2 space-y-8 py-2">
               {history.map((h, i) => (
                 <div key={i} className="relative pl-6 md:pl-10 group">
                   {/* Timeline Dot */}
-                  <div className="absolute -left-[9px] top-1 h-4 w-4 rounded-full border-4 border-white bg-brand-300 group-hover:bg-brand-600 transition-colors shadow-sm" />
+                  <div className="absolute -left-[9px] top-1 h-4 w-4 rounded-full border-4 border-white bg-red-300 group-hover:bg-red-600 transition-colors shadow-sm" />
 
                   <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3 mb-1.5">
-                    <span className="text-xl font-bold text-brand-800 tabular-nums">{h.y}</span>
+                    <span className="text-xl font-bold text-red-800 tabular-nums">{h.y}</span>
                     <span className="text-xs font-semibold text-neutral-500 bg-neutral-100 px-2 py-0.5 rounded-full">{h.sub}</span>
                   </div>
                   <p className="text-sm text-neutral-700 leading-relaxed group-hover:text-neutral-900 transition-colors">
@@ -152,7 +152,7 @@ export default function Company() {
               className="grayscale group-hover:grayscale-0 transition-all duration-500"
             />
              <div className="absolute bottom-3 left-3 right-3 bg-white/90 backdrop-blur p-3 rounded-xl border border-white/50 shadow-sm flex items-start gap-2">
-               <MapPin className="text-brand-600 shrink-0 mt-0.5" size={18} />
+               <MapPin className="text-red-600 shrink-0 mt-0.5" size={18} />
                <div>
                  <p className="font-bold text-sm text-neutral-900">本社工場</p>
                  <p className="text-xs text-neutral-600">兵庫県加古川市八幡町船町１１４番地</p>
@@ -161,7 +161,7 @@ export default function Company() {
                  href="https://maps.google.com/maps?q=兵庫県加古川市八幡町船町１１４番地"
                  target="_blank"
                  rel="noreferrer"
-                 className="ml-auto text-xs bg-brand-600 text-white px-2.5 py-1.5 rounded-lg hover:bg-brand-700 transition-colors"
+                 className="ml-auto text-xs bg-red-600 text-white px-2.5 py-1.5 rounded-lg hover:bg-red-700 transition-colors"
                >
                  GoogleMap
                </a>

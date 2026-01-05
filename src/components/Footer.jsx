@@ -32,10 +32,10 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-neutral-900 mb-4">コンテンツ</h4>
             <ul className="space-y-3 text-sm text-neutral-600">
-              <li><Link className="hover:text-brand-600 transition-colors" to="/products">製品一覧</Link></li>
-              <li><Link className="hover:text-brand-600 transition-colors" to="/company">会社案内</Link></li>
-              <li><Link className="hover:text-brand-600 transition-colors" to="/resources">カタログ・資料</Link></li>
-              <li><Link className="hover:text-brand-600 transition-colors" to="/contact">お問い合わせ</Link></li>
+              <li><Link className="hover:text-red-600 transition-colors" to="/products">製品一覧</Link></li>
+              <li><Link className="hover:text-red-600 transition-colors" to="/company">会社案内</Link></li>
+              <li><Link className="hover:text-red-600 transition-colors" to="/resources">カタログ・資料</Link></li>
+              <li><Link className="hover:text-red-600 transition-colors" to="/contact">お問い合わせ</Link></li>
             </ul>
           </div>
 
@@ -45,17 +45,17 @@ export default function Footer() {
             <div className="space-y-4 text-sm text-neutral-600">
               <a
                 href={telHref}
-                className="flex items-start gap-3 hover:text-brand-600 transition-colors group"
+                className="flex items-start gap-3 hover:text-red-600 transition-colors group"
               >
-                <Phone size={18} className="mt-0.5 text-neutral-400 group-hover:text-brand-600"/>
+                <Phone size={18} className="mt-0.5 text-neutral-400 group-hover:text-red-600"/>
                 <span className="font-mono text-base font-medium text-neutral-800">{telRaw}</span>
               </a>
 
               <a
                 href={`mailto:${email}`}
-                className="flex items-start gap-3 hover:text-brand-600 transition-colors group"
+                className="flex items-start gap-3 hover:text-red-600 transition-colors group"
               >
-                <Mail size={18} className="mt-0.5 text-neutral-400 group-hover:text-brand-600"/>
+                <Mail size={18} className="mt-0.5 text-neutral-400 group-hover:text-red-600"/>
                 <span className="break-all">{email}</span>
               </a>
 
@@ -63,9 +63,9 @@ export default function Footer() {
                 href={mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-3 hover:text-brand-600 transition-colors group"
+                className="flex items-start gap-3 hover:text-red-600 transition-colors group"
               >
-                <MapPin size={18} className="mt-0.5 text-neutral-400 group-hover:text-brand-600"/>
+                <MapPin size={18} className="mt-0.5 text-neutral-400 group-hover:text-red-600"/>
                 <span>
                   {address}
                   <ExternalLink size={12} className="inline ml-1 opacity-50"/>
