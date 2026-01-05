@@ -37,14 +37,14 @@ export default function ProductCard({ item, variant = 'compact' }) {
         <div className="flex flex-1 flex-col p-4">
           <div className="mb-2 flex flex-wrap gap-1.5">
             {tags.slice(0, 3).map((tag) => (
-              <span key={tag} className="inline-flex items-center text-[10px] font-bold uppercase tracking-wider text-brand-600 bg-brand-50 px-2 py-0.5 rounded">
+              <span key={tag} className="inline-flex items-center text-[10px] font-bold uppercase tracking-wider text-red-600 bg-red-50 px-2 py-0.5 rounded">
                 {tag}
               </span>
             ))}
           </div>
 
           <Link to={link}>
-            <h3 className="text-lg font-bold text-neutral-900 group-hover:text-brand-700 transition-colors">
+            <h3 className="text-lg font-bold text-neutral-900 group-hover:text-red-600 transition-colors">
               {title}
             </h3>
           </Link>
@@ -69,7 +69,7 @@ export default function ProductCard({ item, variant = 'compact' }) {
           <div className="mt-auto pt-4">
             <Link
               to={link}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-neutral-200 bg-white px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors group-hover:bg-brand-50 group-hover:border-brand-200 group-hover:text-brand-700"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-neutral-200 bg-white px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors group-hover:bg-red-50 group-hover:border-red-200 group-hover:text-red-600"
             >
               詳細を見る <ArrowRight size={16} />
             </Link>
@@ -110,7 +110,7 @@ export default function ProductCard({ item, variant = 'compact' }) {
         </div>
 
         <div className="p-3.5">
-          <h3 className="font-bold text-neutral-900 group-hover:text-brand-600 transition-colors">
+          <h3 className="font-bold text-neutral-900 group-hover:text-red-600 transition-colors">
             {title}
           </h3>
           {item.desc && (
