@@ -44,9 +44,9 @@ export default function Products() {
           </div>
         </div>
 
-        {/* 検索フィルター */}
-        <div className="sticky top-20 z-30 mb-6 rounded-xl bg-white/80 p-3 shadow-sm backdrop-blur border border-neutral-200">
-          <div className="grid gap-3 md:grid-cols-12">
+        {/* 検索フィルター（iPhone最適化） */}
+        <div className="sticky top-16 z-30 mb-5 sm:mb-6 rounded-xl bg-white/95 p-3 sm:p-4 shadow-sm backdrop-blur-md border border-neutral-200">
+          <div className="grid gap-2.5 sm:gap-3 md:grid-cols-12">
             <div className="relative md:col-span-8">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" size={18} />
               <input
@@ -54,7 +54,7 @@ export default function Products() {
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
                 placeholder="キーワード検索（例：高枝、伸縮、太枝...）"
-                className="w-full rounded-lg border border-neutral-300 bg-white pl-10 pr-3 py-2 text-sm focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all"
+                className="w-full rounded-xl border border-neutral-300 bg-white pl-10 pr-3 py-2.5 min-h-[44px] text-base focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all"
               />
             </div>
             <div className="relative md:col-span-4">
@@ -62,7 +62,7 @@ export default function Products() {
               <select
                 value={cat}
                 onChange={(e) => setCat(e.target.value)}
-                className="w-full appearance-none rounded-lg border border-neutral-300 bg-white pl-9 pr-8 py-2 text-sm focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all cursor-pointer"
+                className="w-full appearance-none rounded-xl border border-neutral-300 bg-white pl-9 pr-8 py-2.5 min-h-[44px] text-base focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all cursor-pointer"
               >
                 <option>すべて</option>
                 {CATEGORIES.map((c) => <option key={c}>{c}</option>)}

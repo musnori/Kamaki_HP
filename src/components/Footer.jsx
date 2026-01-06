@@ -13,14 +13,14 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-neutral-200 bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-        <div className="grid gap-10 md:grid-cols-4 lg:gap-12">
-          
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-10 sm:py-12 md:py-16">
+        <div className="grid gap-8 sm:gap-10 md:grid-cols-4 lg:gap-12">
+
           {/* ブランド情報 */}
           <div className="md:col-span-2">
-            <Link to="/" className="inline-flex items-center gap-2 mb-4">
-              <img src={Logo} alt="Kamaki Logo" className="h-10 w-auto" />
-              <span className="text-lg font-bold text-neutral-900">株式会社 Kamaki</span>
+            <Link to="/" className="inline-flex items-center gap-2 mb-4 min-h-[44px]">
+              <img src={Logo} alt="Kamaki Logo" className="h-9 sm:h-10 w-auto" />
+              <span className="text-base sm:text-lg font-bold text-neutral-900">株式会社 Kamaki</span>
             </Link>
             <p className="text-sm text-neutral-600 leading-relaxed max-w-xs">
               創業1887年。播州の地で培った伝統技術と最新設備で、
@@ -28,34 +28,34 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* サイトマップ */}
+          {/* サイトマップ（iPhone最適化） */}
           <div>
-            <h4 className="font-bold text-neutral-900 mb-4">コンテンツ</h4>
-            <ul className="space-y-3 text-sm text-neutral-600">
-              <li><Link className="hover:text-red-600 transition-colors" to="/products">製品一覧</Link></li>
-              <li><Link className="hover:text-red-600 transition-colors" to="/company">会社案内</Link></li>
-              <li><Link className="hover:text-red-600 transition-colors" to="/resources">カタログ・資料</Link></li>
-              <li><Link className="hover:text-red-600 transition-colors" to="/contact">お問い合わせ</Link></li>
+            <h4 className="font-bold text-neutral-900 mb-3 sm:mb-4">コンテンツ</h4>
+            <ul className="space-y-1 text-sm text-neutral-600">
+              <li><Link className="block py-2 min-h-[44px] flex items-center active:text-red-600 transition-colors" to="/products">製品一覧</Link></li>
+              <li><Link className="block py-2 min-h-[44px] flex items-center active:text-red-600 transition-colors" to="/company">会社案内</Link></li>
+              <li><Link className="block py-2 min-h-[44px] flex items-center active:text-red-600 transition-colors" to="/resources">カタログ・資料</Link></li>
+              <li><Link className="block py-2 min-h-[44px] flex items-center active:text-red-600 transition-colors" to="/contact">お問い合わせ</Link></li>
             </ul>
           </div>
 
-          {/* 連絡先 */}
+          {/* 連絡先（iPhone最適化） */}
           <div>
-            <h4 className="font-bold text-neutral-900 mb-4">お問い合わせ</h4>
-            <div className="space-y-4 text-sm text-neutral-600">
+            <h4 className="font-bold text-neutral-900 mb-3 sm:mb-4">お問い合わせ</h4>
+            <div className="space-y-2 text-sm text-neutral-600">
               <a
                 href={telHref}
-                className="flex items-start gap-3 hover:text-red-600 transition-colors group"
+                className="flex items-center gap-3 py-2 min-h-[44px] active:text-red-600 transition-colors group"
               >
-                <Phone size={18} className="mt-0.5 text-neutral-400 group-hover:text-red-600"/>
+                <Phone size={18} className="text-neutral-400 group-active:text-red-600 flex-shrink-0"/>
                 <span className="font-mono text-base font-medium text-neutral-800">{telRaw}</span>
               </a>
 
               <a
                 href={`mailto:${email}`}
-                className="flex items-start gap-3 hover:text-red-600 transition-colors group"
+                className="flex items-center gap-3 py-2 min-h-[44px] active:text-red-600 transition-colors group"
               >
-                <Mail size={18} className="mt-0.5 text-neutral-400 group-hover:text-red-600"/>
+                <Mail size={18} className="text-neutral-400 group-active:text-red-600 flex-shrink-0"/>
                 <span className="break-all">{email}</span>
               </a>
 
@@ -63,10 +63,10 @@ export default function Footer() {
                 href={mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-3 hover:text-red-600 transition-colors group"
+                className="flex items-start gap-3 py-2 min-h-[44px] active:text-red-600 transition-colors group"
               >
-                <MapPin size={18} className="mt-0.5 text-neutral-400 group-hover:text-red-600"/>
-                <span>
+                <MapPin size={18} className="mt-0.5 text-neutral-400 group-active:text-red-600 flex-shrink-0"/>
+                <span className="text-[13px] sm:text-sm leading-relaxed">
                   {address}
                   <ExternalLink size={12} className="inline ml-1 opacity-50"/>
                 </span>
@@ -76,12 +76,12 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-neutral-100 bg-neutral-50">
-        <div className="mx-auto max-w-6xl px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
-          <p>© {new Date().getFullYear()} KAMAKI (Kishimoto Agricultural Mfg. Co., Ltd.)</p>
-          <div className="flex gap-4">
-            <Link to="/privacy" className="hover:text-neutral-800">プライバシーポリシー</Link>
-            <Link to="/terms" className="hover:text-neutral-800">サイト利用規約</Link>
+      <div className="border-t border-neutral-100 bg-neutral-50 safe-area-bottom">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-5 sm:py-6 flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4 text-xs text-neutral-500">
+          <p className="text-center md:text-left">© {new Date().getFullYear()} KAMAKI (Kishimoto Agricultural Mfg. Co., Ltd.)</p>
+          <div className="flex gap-1">
+            <Link to="/privacy" className="px-3 py-2 min-h-[44px] flex items-center active:text-neutral-800 transition-colors">プライバシーポリシー</Link>
+            <Link to="/terms" className="px-3 py-2 min-h-[44px] flex items-center active:text-neutral-800 transition-colors">サイト利用規約</Link>
           </div>
         </div>
       </div>

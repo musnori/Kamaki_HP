@@ -12,23 +12,23 @@ export default function Section({
   return (
     <section
       id={id}
-      // 余白を削減して、より引き締まったデザインに
-      className={`py-10 md:py-16 ${bg} ${className}`}
+      // 余白を削減して、より引き締まったデザインに（iPhone最適化）
+      className={`py-8 sm:py-10 md:py-16 ${bg} ${className}`}
     >
-      <div className="mx-auto max-w-6xl px-4">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {(title || subtitle) && (
-          <header className="mb-8 md:mb-10 text-center md:text-left">
+          <header className="mb-6 sm:mb-8 md:mb-10 text-center md:text-left">
             {title && (
-              <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-neutral-900">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-neutral-900">
                 {title}
               </h2>
             )}
             {subtitle && (
-              <p className="mt-2 max-w-2xl text-base text-neutral-600 md:text-lg">
+              <p className="mt-2 max-w-2xl text-sm sm:text-base text-neutral-600 md:text-lg">
                 {subtitle}
               </p>
             )}
-            <div className="mt-4 h-1 w-12 bg-red-600 rounded-full mx-auto md:mx-0 opacity-30"/>
+            <div className="mt-3 sm:mt-4 h-1 w-12 bg-red-600 rounded-full mx-auto md:mx-0 opacity-30"/>
           </header>
         )}
         {children}
