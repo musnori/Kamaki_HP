@@ -52,33 +52,33 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - タップターゲット44px以上確保 */}
         <button
-          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-xl bg-neutral-50 text-neutral-600 hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-red-500/20"
+          className="md:hidden inline-flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-xl bg-neutral-50 text-neutral-600 active:bg-neutral-200 focus:outline-none focus:ring-2 focus:ring-red-500/20 transition-colors"
           aria-label="メニューを開く"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
-          {open ? <X size={20} /> : <Menu size={20} />}
+          {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile Nav Drawer */}
-      <div 
+      {/* Mobile Nav Drawer - iPhone最適化 */}
+      <div
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white border-b ${
-          open ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+          open ? 'max-h-[450px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <nav className="flex flex-col p-4 space-y-2">
+        <nav className="flex flex-col p-4 space-y-1 safe-area-x">
           {navItems.map((n) => (
             <NavLink
               key={n.to}
               to={n.to}
               className={({ isActive }) =>
-                `block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
+                `block px-4 py-3.5 min-h-[48px] flex items-center rounded-xl text-base font-medium transition-colors ${
                   isActive
                     ? 'bg-red-50 text-red-700'
-                    : 'text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900'
+                    : 'text-neutral-600 active:bg-neutral-100'
                 }`
               }
             >
@@ -86,11 +86,11 @@ export default function Navbar() {
             </NavLink>
           ))}
           <div className="pt-4 mt-2 border-t border-neutral-100">
-            <a 
-              href="tel:0794380070" 
-              className="flex items-center justify-center gap-2 w-full rounded-xl bg-neutral-900 text-white py-3 text-sm font-bold"
+            <a
+              href="tel:0794380070"
+              className="flex items-center justify-center gap-2 w-full rounded-xl bg-neutral-900 text-white py-3.5 min-h-[48px] text-base font-bold active:bg-neutral-800 transition-colors"
             >
-              <Phone size={16} /> 079-438-0070
+              <Phone size={18} /> 079-438-0070
             </a>
           </div>
         </nav>

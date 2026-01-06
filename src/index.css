@@ -5,8 +5,67 @@
 /* ベースのタイポグラフィ最適化 */
 :root {
   color-scheme: light;
+  /* iOS Safe Area対応 */
+  --safe-area-inset-top: env(safe-area-inset-top, 0px);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-inset-left: env(safe-area-inset-left, 0px);
+  --safe-area-inset-right: env(safe-area-inset-right, 0px);
 }
 
 html, body, #root { height: 100%; }
 
 .prose p { margin: 0.6rem 0; }
+
+/* iOS タップハイライト無効化 */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* スムーズスクロール（モーション軽減設定を尊重） */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* タッチデバイス用ホバー効果最適化 */
+@media (hover: none) and (pointer: coarse) {
+  /* タッチデバイスではホバー効果を軽減 */
+  .group:hover .group-hover\:scale-105 {
+    transform: none;
+  }
+}
+
+/* iPhoneでのフォームズーム防止（16px以上で自動ズームされない） */
+@media screen and (max-width: 767px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="search"],
+  input[type="tel"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Safe Area対応のパディングユーティリティ */
+.safe-area-top {
+  padding-top: var(--safe-area-inset-top);
+}
+
+.safe-area-bottom {
+  padding-bottom: var(--safe-area-inset-bottom);
+}
+
+.safe-area-left {
+  padding-left: var(--safe-area-inset-left);
+}
+
+.safe-area-right {
+  padding-right: var(--safe-area-inset-right);
+}
+
+.safe-area-x {
+  padding-left: var(--safe-area-inset-left);
+  padding-right: var(--safe-area-inset-right);
+}

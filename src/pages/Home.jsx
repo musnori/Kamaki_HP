@@ -9,39 +9,39 @@ import { PRODUCTS } from '@/data/products'
 export default function Home() {
   return (
     <div className="bg-neutral-50/50">
-      {/* Hero Section - メインビジュアル */}
+      {/* Hero Section - メインビジュアル（iPhone最適化） */}
       <section className="relative overflow-hidden">
         <div className="relative w-full">
           <img
             src="/images/hero-banner.jpg"
             alt="KAMAKI GARDEN TOOLS"
-            className="w-full h-[300px] md:h-[450px] object-cover"
+            className="w-full h-[280px] sm:h-[320px] md:h-[450px] object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
           <div className="absolute inset-0 flex items-center">
-            <div className="mx-auto max-w-6xl px-4 w-full">
+            <div className="mx-auto max-w-6xl px-4 sm:px-6 w-full">
               <motion.div
                 className="max-w-lg text-white"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <span className="inline-block px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-xs font-bold tracking-wide mb-3">
+                <span className="inline-block px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-white text-[11px] sm:text-xs font-bold tracking-wide mb-2 sm:mb-3">
                   SINCE 1887
                 </span>
-                <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
                   プロが選ぶ、<br />
                   <span className="text-red-400">確かな切れ味。</span>
                 </h1>
-                <p className="mt-4 text-white/90 text-sm md:text-base leading-relaxed">
-                  兵庫県加古川市から世界へ。創業130年を超える園芸刃物メーカー「KAMAKI」は、<br className="hidden md:block" />
+                <p className="mt-3 sm:mt-4 text-white/90 text-[13px] sm:text-sm md:text-base leading-relaxed">
+                  兵庫県加古川市から世界へ。<br className="sm:hidden" />創業130年を超える園芸刃物メーカー「KAMAKI」は、<br className="hidden md:block" />
                   現場の声を形にした高枝切鋏や剪定工具をお届けします。
                 </p>
-                <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                  <Link to="/products" className="inline-flex items-center justify-center gap-2 rounded-lg bg-red-600 text-white px-6 py-3 font-medium hover:bg-red-700 transition-all">
+                <div className="mt-5 sm:mt-6 flex flex-col sm:flex-row gap-2.5 sm:gap-3">
+                  <Link to="/products" className="inline-flex items-center justify-center gap-2 rounded-xl bg-red-600 text-white px-5 sm:px-6 py-3 min-h-[48px] text-[15px] font-medium active:bg-red-700 transition-all">
                     製品一覧を見る <ArrowRight size={18}/>
                   </Link>
-                  <Link to="/contact" className="inline-flex items-center justify-center gap-2 rounded-lg bg-white/20 backdrop-blur-sm text-white px-6 py-3 font-medium hover:bg-white/30 transition-all">
+                  <Link to="/contact" className="inline-flex items-center justify-center gap-2 rounded-xl bg-white/20 backdrop-blur-sm text-white px-5 sm:px-6 py-3 min-h-[48px] text-[15px] font-medium active:bg-white/30 transition-all">
                     お問い合わせ
                   </Link>
                 </div>
@@ -72,7 +72,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="mt-6 sm:mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4">
             {[
               { name: '高枝切鋏', link: '/products/high-branch', icon: '🌳' },
               { name: '刈込鋏', link: '/products/hedge-shears', icon: '✂️' },
@@ -85,14 +85,14 @@ export default function Home() {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ delay: i * 0.05 }}
               >
                 <Link
                   to={item.link}
-                  className="block p-4 bg-neutral-50 rounded-xl hover:bg-brand-50 hover:shadow-md transition-all text-center group"
+                  className="block p-3 sm:p-4 min-h-[80px] bg-neutral-50 rounded-xl active:bg-brand-50 active:shadow-md transition-all text-center group"
                 >
-                  <span className="text-2xl">{item.icon}</span>
-                  <p className="mt-2 font-medium text-neutral-800 group-hover:text-brand-700">{item.name}</p>
+                  <span className="text-xl sm:text-2xl">{item.icon}</span>
+                  <p className="mt-1.5 sm:mt-2 text-sm sm:text-base font-medium text-neutral-800 group-hover:text-brand-700">{item.name}</p>
                 </Link>
               </motion.div>
             ))}
@@ -366,32 +366,32 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* お問い合わせCTA */}
-      <section className="py-12 md:py-16 bg-neutral-900 text-white">
-        <div className="mx-auto max-w-6xl px-4 text-center">
+      {/* お問い合わせCTA（iPhone最適化） */}
+      <section className="py-10 sm:py-12 md:py-16 bg-neutral-900 text-white safe-area-bottom">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold">お気軽にご相談ください</h2>
-            <p className="mt-3 text-neutral-400">製品のご質問、お見積り、修理のご依頼など</p>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">お気軽にご相談ください</h2>
+            <p className="mt-2 sm:mt-3 text-sm sm:text-base text-neutral-400">製品のご質問、お見積り、修理のご依頼など</p>
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <a
                 href="tel:0794380070"
-                className="inline-flex items-center gap-2 bg-white text-neutral-900 px-6 py-3 rounded-lg font-bold hover:bg-neutral-100 transition-colors"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-white text-neutral-900 px-6 py-3.5 min-h-[52px] rounded-xl text-base font-bold active:bg-neutral-200 transition-colors"
               >
                 <Phone size={20} />
                 079-438-0070
               </a>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-red-700 transition-colors"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-red-600 text-white px-6 py-3.5 min-h-[52px] rounded-xl text-base font-medium active:bg-red-700 transition-colors"
               >
                 お問い合わせフォーム <ArrowRight size={18} />
               </Link>
             </div>
-            <p className="mt-4 text-sm text-neutral-500">受付時間: 平日 9:00〜17:00</p>
+            <p className="mt-4 text-xs sm:text-sm text-neutral-500">受付時間: 平日 9:00〜17:00</p>
           </motion.div>
         </div>
       </section>

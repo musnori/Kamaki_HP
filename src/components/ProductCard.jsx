@@ -69,7 +69,7 @@ export default function ProductCard({ item, variant = 'compact' }) {
           <div className="mt-auto pt-4">
             <Link
               to={link}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-neutral-200 bg-white px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors group-hover:bg-red-50 group-hover:border-red-200 group-hover:text-red-600"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-neutral-200 bg-white px-4 py-2.5 min-h-[44px] text-sm font-semibold text-neutral-700 transition-colors active:bg-red-50 active:border-red-200 active:text-red-600"
             >
               詳細を見る <ArrowRight size={16} />
             </Link>
