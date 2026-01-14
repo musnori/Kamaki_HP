@@ -147,8 +147,9 @@ export default function Home() {
                     握りやすいグリップ設計
                   </li>
                 </ul>
+                {/* UX改善: タップ領域を拡大し、ボタンスタイルに変更 */}
                 <div className="mt-6">
-                  <Link to="/products/high-branch" className="inline-flex items-center gap-2 text-red-600 font-medium hover:text-red-700 transition-colors">
+                  <Link to="/products/high-branch" className="inline-flex items-center gap-2 bg-red-50 text-red-600 font-bold px-5 py-3 min-h-[48px] rounded-xl active:bg-red-600 active:text-white transition-colors">
                     詳しく見る <ChevronRight size={18} />
                   </Link>
                 </div>
@@ -204,8 +205,9 @@ export default function Home() {
                     最大4m以上の高さに対応
                   </li>
                 </ul>
+                {/* UX改善: タップ領域を拡大し、ボタンスタイルに変更 */}
                 <div className="mt-6">
-                  <Link to="/products/rope-high-branch" className="inline-flex items-center gap-2 text-red-600 font-medium hover:text-red-700 transition-colors">
+                  <Link to="/products/rope-high-branch" className="inline-flex items-center gap-2 bg-red-50 text-red-600 font-bold px-5 py-3 min-h-[48px] rounded-xl active:bg-red-600 active:text-white transition-colors">
                     詳しく見る <ChevronRight size={18} />
                   </Link>
                 </div>
@@ -247,8 +249,9 @@ export default function Home() {
                     グリップ式で操作簡単
                   </li>
                 </ul>
+                {/* UX改善: タップ領域を拡大し、ボタンスタイルに変更 */}
                 <div className="mt-6">
-                  <Link to="/products/long-pruners" className="inline-flex items-center gap-2 text-red-600 font-medium hover:text-red-700 transition-colors">
+                  <Link to="/products/long-pruners" className="inline-flex items-center gap-2 bg-red-50 text-red-600 font-bold px-5 py-3 min-h-[48px] rounded-xl active:bg-red-600 active:text-white transition-colors">
                     詳しく見る <ChevronRight size={18} />
                   </Link>
                 </div>
@@ -359,8 +362,9 @@ export default function Home() {
             <ProductCard key={p.id} item={p} />
           ))}
         </div>
+        {/* UX改善: ボタンのタップ領域拡大 */}
         <div className="mt-8 text-center">
-          <Link to="/products" className="inline-flex items-center gap-2 rounded-full border border-neutral-300 px-5 py-2 text-sm font-medium hover:bg-neutral-50 hover:border-neutral-400 transition-colors">
+          <Link to="/products" className="inline-flex items-center gap-2 rounded-xl border border-neutral-300 bg-white px-6 py-3 min-h-[48px] text-sm font-bold active:bg-neutral-100 active:border-neutral-400 transition-colors">
             製品カタログをすべて見る <ArrowRight size={16}/>
           </Link>
         </div>
