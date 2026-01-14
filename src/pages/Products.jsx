@@ -80,9 +80,10 @@ export default function Products() {
             <AlertCircle size={40} className="mb-3 text-neutral-300" />
             <p className="text-base font-medium">該当する製品が見つかりませんでした</p>
             <p className="text-sm mt-1">キーワードを変更するか、カテゴリを「すべて」に戻してお試しください。</p>
+            {/* UX改善: リセットボタンをより目立たせ、タップ領域を拡大 */}
             <button
               onClick={() => {setQ(''); setCat('すべて')}}
-              className="mt-5 text-red-600 hover:underline font-medium text-sm"
+              className="mt-6 inline-flex items-center justify-center gap-2 bg-red-50 text-red-600 border border-red-200 rounded-xl px-6 py-3 min-h-[48px] font-bold text-sm active:bg-red-600 active:text-white transition-colors"
             >
               条件をリセット
             </button>

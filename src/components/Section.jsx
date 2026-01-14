@@ -28,7 +28,8 @@ export default function Section({
                 {subtitle}
               </p>
             )}
-            <div className="mt-3 sm:mt-4 h-1 w-12 bg-red-600 rounded-full mx-auto md:mx-0 opacity-30"/>
+            {/* UX改善: アンダーラインの視認性向上 - opacity削除でより明確に */}
+            <div className="mt-3 sm:mt-4 h-1 w-14 bg-red-500 rounded-full mx-auto md:mx-0"/>
           </header>
         )}
         {children}

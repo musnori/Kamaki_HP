@@ -74,9 +74,10 @@ export default function Contact() {
                 }}
                 className="bg-white p-4 sm:p-5 md:p-6 rounded-2xl border border-neutral-200 shadow-sm space-y-5 sm:space-y-6"
               >
+                {/* UX改善: フォームラベルの視認性向上 - text-xsからtext-smへ、間隔も調整 */}
                 <div className="grid gap-4 sm:gap-5 md:grid-cols-2">
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-neutral-700">お問い合わせ種別 <span className="text-red-500">*</span></label>
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-neutral-800">お問い合わせ種別 <span className="text-red-500">*</span></label>
                     <select className="w-full rounded-xl border-neutral-300 bg-neutral-50 px-3 py-2.5 min-h-[44px] text-base focus:border-red-500 focus:bg-white focus:ring-4 focus:ring-red-500/10 transition-all outline-none text-neutral-700">
                       <option>製品のご相談</option>
                       <option>購入・在庫の確認</option>
@@ -86,25 +87,25 @@ export default function Contact() {
                       <option>その他</option>
                     </select>
                   </div>
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-neutral-700">会社名</label>
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-neutral-800">会社名</label>
                     <input className="w-full rounded-xl border-neutral-300 bg-neutral-50 px-3 py-2.5 min-h-[44px] text-base focus:border-red-500 focus:bg-white focus:ring-4 focus:ring-red-500/10 transition-all outline-none" placeholder="例）株式会社Kamaki" />
                   </div>
                 </div>
 
                 <div className="grid gap-4 sm:gap-5 md:grid-cols-2">
-                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-neutral-700">お名前 <span className="text-red-500">*</span></label>
+                   <div className="space-y-2">
+                    <label className="text-sm font-bold text-neutral-800">お名前 <span className="text-red-500">*</span></label>
                     <input required className="w-full rounded-xl border-neutral-300 bg-neutral-50 px-3 py-2.5 min-h-[44px] text-base focus:border-red-500 focus:bg-white focus:ring-4 focus:ring-red-500/10 transition-all outline-none" placeholder="例）山田 太郎" />
                   </div>
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-neutral-700">メールアドレス <span className="text-red-500">*</span></label>
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-neutral-800">メールアドレス <span className="text-red-500">*</span></label>
                     <input type="email" required className="w-full rounded-xl border-neutral-300 bg-neutral-50 px-3 py-2.5 min-h-[44px] text-base focus:border-red-500 focus:bg-white focus:ring-4 focus:ring-red-500/10 transition-all outline-none" placeholder="example@mail.com" />
                   </div>
                 </div>
 
-                <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-neutral-700">ご相談内容 <span className="text-red-500">*</span></label>
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-neutral-800">ご相談内容 <span className="text-red-500">*</span></label>
                   <textarea required rows={5} className="w-full rounded-xl border-neutral-300 bg-neutral-50 px-3 py-2.5 text-base leading-relaxed focus:border-red-500 focus:bg-white focus:ring-4 focus:ring-red-500/10 transition-all outline-none resize-y" placeholder="製品の型番や、ご検討中の用途などをご記入ください。" />
                 </div>
 

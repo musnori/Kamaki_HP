@@ -1,7 +1,7 @@
 // src/pages/HighPruner.jsx
 import Section from '@/components/Section'
 import { Link } from 'react-router-dom'
-import { FileText, MessageCircle } from 'lucide-react'
+import { FileText, MessageCircle, ChevronLeft } from 'lucide-react'
 
 // データ定義（変更なし）
 const TWO_STAGE = [
@@ -81,8 +81,21 @@ function ResponsiveSpecTable({ rows }) {
 export default function HighPruner() {
   return (
     <div className="bg-neutral-50 min-h-screen">
+      {/* UX改善: ページ上部に戻るナビゲーションを追加 - 片手操作しやすい位置 */}
+      <div className="bg-white border-b border-neutral-100">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-3">
+          <Link
+            to="/products"
+            className="inline-flex items-center gap-1 text-sm text-neutral-600 active:text-red-600 py-2 -ml-2 pl-2 pr-4 min-h-[44px] rounded-lg transition-colors"
+          >
+            <ChevronLeft size={18} />
+            製品一覧へ戻る
+          </Link>
+        </div>
+      </div>
+
       <Section title="高枝切鋏（伸縮式「かるのび」）" subtitle="届かない枝を安全にカット。用途に合わせて選べる伸縮タイプ。">
-        
+
         {/* 重要なお知らせを目立たせる */}
         <div className="mb-8 rounded-lg border-l-4 border-amber-400 bg-amber-50 p-4 text-sm text-amber-900">
           <p className="font-bold mb-1">💡 付属品について</p>
@@ -109,28 +122,33 @@ export default function HighPruner() {
           </div>
         </div>
 
-        {/* CTA Actions */}
+        {/* CTA Actions - UX改善: ボタンのタップ領域拡大 */}
         <div className="mt-12 pt-8 border-t border-neutral-200">
           <h4 className="text-center font-semibold text-neutral-900 mb-6">お探しの情報は見つかりましたか？</h4>
           <div className="grid gap-3 sm:flex sm:justify-center">
             <a
               href="https://kamaki.jimdofree.com/app/download/12470531188/%E9%AB%98%E6%9E%9D%E5%88%87%E7%8B%AD%E5%AF%BE%E7%AD%96.pdf?t=1507607567"
               target="_blank" rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-neutral-800 text-white px-5 py-3 hover:bg-neutral-700 transition-colors"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-neutral-800 text-white px-5 py-3.5 min-h-[52px] active:bg-neutral-700 transition-colors"
             >
               <FileText size={18} />
               トラブルシューティング (PDF)
             </a>
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 text-white px-6 py-3 shadow-lg shadow-brand-600/20 hover:bg-brand-700 transition-colors"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 text-white px-6 py-3.5 min-h-[52px] shadow-lg shadow-brand-600/20 active:bg-brand-700 transition-colors"
             >
               <MessageCircle size={18} />
               見積・在庫の問い合わせ
             </Link>
           </div>
-          <div className="mt-4 text-center">
-            <Link to="/products" className="text-sm text-neutral-500 hover:text-brand-600 underline">
+          {/* UX改善: 製品一覧へ戻るボタンをより目立たせる */}
+          <div className="mt-6 text-center">
+            <Link
+              to="/products"
+              className="inline-flex items-center justify-center gap-1 bg-neutral-100 text-neutral-700 border border-neutral-200 rounded-xl px-5 py-3 min-h-[48px] text-sm font-medium active:bg-neutral-200 transition-colors"
+            >
+              <ChevronLeft size={16} />
               製品一覧へ戻る
             </Link>
           </div>

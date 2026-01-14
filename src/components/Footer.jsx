@@ -79,9 +79,10 @@ export default function Footer() {
       <div className="border-t border-neutral-100 bg-neutral-50 safe-area-bottom">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-5 sm:py-6 flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4 text-xs text-neutral-500">
           <p className="text-center md:text-left">© {new Date().getFullYear()} KAMAKI (Kishimoto Agricultural Mfg. Co., Ltd.)</p>
-          <div className="flex gap-1">
-            <Link to="/privacy" className="px-3 py-2 min-h-[44px] flex items-center active:text-neutral-800 transition-colors">プライバシーポリシー</Link>
-            <Link to="/terms" className="px-3 py-2 min-h-[44px] flex items-center active:text-neutral-800 transition-colors">サイト利用規約</Link>
+          {/* UX改善: リンク間隔を拡大 - タップ誤操作を防止 */}
+          <div className="flex gap-2">
+            <Link to="/privacy" className="px-4 py-2 min-h-[44px] flex items-center rounded-lg active:bg-neutral-200 active:text-neutral-800 transition-colors">プライバシーポリシー</Link>
+            <Link to="/terms" className="px-4 py-2 min-h-[44px] flex items-center rounded-lg active:bg-neutral-200 active:text-neutral-800 transition-colors">サイト利用規約</Link>
           </div>
         </div>
       </div>
