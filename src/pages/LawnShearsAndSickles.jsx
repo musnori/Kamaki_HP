@@ -2,9 +2,9 @@ import Section from '@/components/Section'
 import { Link } from 'react-router-dom'
 
 const LAWN_MISC = [
-  { no: 'LS-200', name: '芝生鋏',       length: '—', weight: '—', pack: '—' },
-  { no: 'OS-01',  name: '押切',         length: '—', weight: '—', pack: '—' },
-  { no: 'KM-100', name: '鎌（草刈用）', length: '—', weight: '—', pack: '—' },
+  { no: 'L-3000',   name: '芝生鋏（固定式・硬質クロームメッキ）', length: '325mm', weight: '—', pack: '—' },
+  { no: 'L-3220',   name: '芝生鋏（回転式）',                     length: '340mm', weight: '—', pack: '—' },
+  { no: 'L-3220S',  name: '芝生鋏（回転式・高炭素ステンレス）',   length: '340mm', weight: '360g', pack: '—' },
 ]
 
 function SpecTable({ rows }) {
@@ -33,7 +33,7 @@ export default function LawnShearsAndSickles() {
   return (
     <Section
       title="芝生鋏・押切・鎌"
-      subtitle="芝生の仕上げや草刈り、細工に使えるツール群。"
+      subtitle="芝生の仕上げ、草刈り、細工に使える多彩なラインナップ。"
     >
       <SpecTable rows={LAWN_MISC} />
       <div className="mt-8 grid gap-3 sm:flex">

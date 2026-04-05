@@ -4,14 +4,13 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, ArrowLeft } from 'lucide-react'
 
 const HEDGE = [
-  { no: 'HS-600', name: '刈込鋏 標準',        length: '—',  weight: '—',  pack: '—' },
-  { no: 'HS-700', name: '刈込鋏 角刃',        length: '—',  weight: '—',  pack: '—' },
-  { no: 'HS-800', name: '刈込鋏 厚刃',        length: '—',  weight: '—',  pack: '—' },
+  { no: '230-D',  name: '刈込鋏',           length: '730mm', weight: '—',    pack: '12丁' },
+  { no: '250',    name: 'スーパー軽量刈込鋏', length: '640mm', weight: '650g', pack: '12丁' },
+  { no: '330',    name: 'テクニカ刈込鋏',    length: '650mm', weight: '650g', pack: '12丁' },
 ]
 
 const TELESCOPIC = [
-  { no: 'HT-600', name: '伸縮式刈込鋏（短柄）', length: '—',  weight: '—',  pack: '—' },
-  { no: 'HT-900', name: '伸縮式刈込鋏（長柄）', length: '—',  weight: '—',  pack: '—' },
+  { no: '1300N', name: '軽量伸縮式刈込鋏「のびーる」', length: '630〜980mm', weight: '—', pack: '—' },
 ]
 
 function ResponsiveSpecTable({ rows }) {

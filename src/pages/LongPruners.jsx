@@ -2,9 +2,8 @@ import Section from '@/components/Section'
 import { Link } from 'react-router-dom'
 
 const LONG_PRUNERS = [
-  { no: 'LP-700', name: 'ロング剪定鋏（軽量）', length: '—', weight: '—', pack: '—' },
-  { no: 'LP-900', name: 'ロング剪定鋏（強化）', length: '—', weight: '—', pack: '—' },
-  { no: 'HC-800', name: '採集鋏（先細）',       length: '—', weight: '—', pack: '—' },
+  { no: 'KGP-1000',  name: 'ロング剪定採集鋏 バイパスタイプ', length: '1m', weight: '500g', pack: '—' },
+  { no: 'KGP-1000A', name: 'ロング剪定採集鋏 アンビルタイプ', length: '1m', weight: '—',    pack: '—' },
 ]
 
 function SpecTable({ rows }) {

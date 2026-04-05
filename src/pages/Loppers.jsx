@@ -4,10 +4,8 @@ import Section from '@/components/Section'
 import { Link } from 'react-router-dom'
 import { MessageCircle, ArrowLeft } from 'lucide-react'
 
-// ★ここを各ファイルに合わせて変更
 const LOPPERS = [
-  { no: 'LP-500', name: '太枝切鋏（アンビル）', length: '—', weight: '—', pack: '—' },
-  { no: 'LP-520', name: '太枝切鋏（バイパス）', length: '—', weight: '—', pack: '—' },
+  { no: 'LN-28', name: '替刃式太枝切鋏', length: '—', weight: '—', pack: '—' },
 ]
 
 // 共通スペック表（各ファイルにコピペするか、別途コンポーネント化推奨）
@@ -56,7 +54,7 @@ function ResponsiveSpecTable({ rows }) {
 export default function Loppers() {
   return (
     <div className="bg-neutral-50 min-h-screen">
-      <Section title="太枝切鋏" subtitle="太い枝をテコの原理で強力に切断。プロの剪定作業をサポートします。">
+      <Section title="替刃式太枝切鋏" subtitle="替刃式で経済的に使える太枝切鋏。テコの原理で太い枝も力強く切断します。">
         
         {/* ★ここにデータ定数を渡す */}
         <ResponsiveSpecTable rows={LOPPERS} />

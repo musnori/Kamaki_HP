@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, ArrowLeft } from 'lucide-react'
 
 const SAWS = [
-  { no: 'SA-210', name: '鋸（折込）',     length: '—', weight: '—', pack: '—' },
-  { no: 'SA-300', name: '鋸（替刃式）',   length: '—', weight: '—', pack: '—' },
-  { no: 'HS-350', name: '高枝鋸（ポール）', length: '—', weight: '—', pack: '—' },
+  { no: 'PS-1.2', name: '伸縮替刃式高枝鋸（ポールソー）', length: '0.9〜1.2m', weight: '520g', pack: '—' },
+  { no: 'PS-2.0', name: '伸縮替刃式高枝鋸（ポールソー）', length: '1.3〜2.0m', weight: '650g', pack: '—' },
+  { no: 'PS-3.0', name: '伸縮替刃式高枝鋸（ポールソー）', length: '1.8〜3.0m', weight: '850g', pack: '—' },
 ]
 
 // レスポンシブ対応スペック表（各ファイル共通）
@@ -57,8 +57,8 @@ export default function Saws() {
   return (
     <div className="bg-neutral-50 min-h-screen">
       <Section
-        title="鋸・高枝鋸"
-        subtitle="太い枝の切断や高所作業に適した、プロ仕様の鋸ラインナップ。"
+        title="伸縮替刃式高枝鋸（ポールソー）"
+        subtitle="替刃交換で長く使えるポールソー。高所の太枝切断に最適な伸縮タイプ。"
       >
         <ResponsiveSpecTable rows={SAWS} />
         

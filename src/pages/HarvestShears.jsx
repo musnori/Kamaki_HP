@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, ArrowLeft } from 'lucide-react'
 
 const HARVEST = [
-  { no: 'HV-10', name: '採果鋏（先細）', length: '—', weight: '—', pack: '—' },
-  { no: 'HV-20', name: '採果鋏（曲刃）', length: '—', weight: '—', pack: '—' },
-  { no: 'HV-30', name: '植木鋏（小型）', length: '—', weight: '—', pack: '—' },
+  { no: '710D',  name: '採果鋏',         length: '190mm', weight: '125g', pack: '—' },
+  { no: '710S',  name: '採果鋏（先細）', length: '190mm', weight: '125g', pack: '—' },
+  { no: 'P-700', name: '植木鋏（万能）', length: '165mm', weight: '75g',  pack: '—' },
+  { no: '770',   name: '植木鋏（小枝切）', length: '190mm', weight: '65g', pack: '—' },
 ]
 
 function ResponsiveSpecTable({ rows }) {
