@@ -3,10 +3,17 @@ import Section from '@/components/Section'
 import { Link } from 'react-router-dom'
 import { MessageCircle, ArrowLeft, FileText } from 'lucide-react'
 
-const ROPE_MAIN = [
-  { no: 'R-2000', name: 'ロープ式高枝切鋏（アンビル）', length: '2.0〜3.5m', weight: '—', pack: '—' },
-  { no: 'R-2500', name: 'ロープ式高枝切鋏（葉刈）',   length: '2.5〜4.0m', weight: '—', pack: '—' },
-  { no: 'R-3000', name: 'ロープ式高枝切鋏',           length: '3.0〜5.0m', weight: '—', pack: '—' },
+// 標準タイプ（かるたか）
+const ROPE_STANDARD = [
+  { no: '1220',    name: 'かるたか',             length: '1.2〜2.0m', weight: '900g',  pack: '6丁' },
+  { no: '1530',    name: 'かるたか',             length: '1.5〜3.0m', weight: '1200g', pack: '6丁' },
+  { no: '1635',    name: 'かるたか',             length: '1.6〜3.5m', weight: '1300g', pack: '6丁' },
+]
+
+// ジョイントタイプ（かるたか）
+const ROPE_JOINT = [
+  { no: '1000DXA', name: 'かるたか ジョイントタイプ', length: '1.4〜3.0m', weight: '1300g', pack: '6丁' },
+  { no: '1030DXA', name: 'かるたか ジョイントタイプ', length: '1.4〜3.0m', weight: '1500g', pack: '6丁' },
 ]
 
 function ResponsiveSpecTable({ rows }) {
@@ -55,8 +62,8 @@ export default function RopeHighPruner() {
   return (
     <div className="bg-neutral-50 min-h-screen">
       <Section
-        title="ロープ式高枝切鋏"
-        subtitle="滑車とロープの力で、高い位置の枝を軽く安全にカット。"
+        title="ロープ式高枝切鋏「かるたか」"
+        subtitle="ロープを引いて高所の枝を安全・軽快にカット。鋸刃付きで太枝にも対応。"
       >
         <div className="mb-8 flex items-start gap-3 rounded-lg border border-brand-200 bg-brand-50 p-4 text-sm text-brand-900">
           <FileText className="shrink-0 text-brand-500 mt-0.5" size={18}/>
@@ -66,7 +73,24 @@ export default function RopeHighPruner() {
           </div>
         </div>
 
-        <ResponsiveSpecTable rows={ROPE_MAIN} />
+        <div className="space-y-10">
+          <div>
+            <h3 className="flex items-center gap-2 text-xl font-bold text-neutral-800 mb-4">
+              <span className="h-6 w-1 rounded-full bg-brand-600"></span>
+              標準タイプ
+            </h3>
+            <ResponsiveSpecTable rows={ROPE_STANDARD} />
+          </div>
+
+          <div>
+            <h3 className="flex items-center gap-2 text-xl font-bold text-neutral-800 mb-4">
+              <span className="h-6 w-1 rounded-full bg-brand-600"></span>
+              ジョイントタイプ
+              <span className="text-sm font-normal text-neutral-500 ml-2">（着脱式ポール）</span>
+            </h3>
+            <ResponsiveSpecTable rows={ROPE_JOINT} />
+          </div>
+        </div>
 
         <div className="mt-12 pt-8 border-t border-neutral-200">
            <div className="grid gap-3 sm:flex sm:justify-center">

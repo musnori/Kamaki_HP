@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, ArrowLeft } from 'lucide-react'
 
 const HIGH_LOPPERS = [
-  { no: 'HLP-300', name: '高枝式太枝切鋏 2段', length: '—', weight: '—', pack: '—' },
-  { no: 'HLP-400', name: '高枝式太枝切鋏 3段', length: '—', weight: '—', pack: '—' },
+  { no: '1150A-1.4', name: '高枝式太枝切鋏「切りりん」',              length: '1.4m', weight: '—', pack: '—' },
+  { no: '1150A-1.9', name: '高枝式太枝切鋏「切りりん」アンビルタイプ', length: '1.9m', weight: '—', pack: '—' },
 ]
 
 function ResponsiveSpecTable({ rows }) {
@@ -53,7 +53,7 @@ function ResponsiveSpecTable({ rows }) {
 export default function HighLoppers() {
   return (
     <div className="bg-neutral-50 min-h-screen">
-      <Section title="高枝式太枝切鋏" subtitle="手の届かない場所にある太い枝を、テコの原理で強力・安全にカット。">
+      <Section title="高枝式太枝切鋏「切りりん」" subtitle="手の届かない場所にある太い枝を、テコの原理で強力・安全にカット。">
         <ResponsiveSpecTable rows={HIGH_LOPPERS} />
         
         <div className="mt-12 pt-8 border-t border-neutral-200">

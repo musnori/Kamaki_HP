@@ -2,9 +2,9 @@ import Section from '@/components/Section'
 import { Link } from 'react-router-dom'
 
 const PRUNERS = [
-  { no: 'PR-01', name: '剪定鋏 バイパス', length: '—', weight: '—', pack: '—' },
-  { no: 'PR-02', name: '剪定鋏 アンビル', length: '—', weight: '—', pack: '—' },
-  { no: 'PR-03', name: '剪定鋏 ステンレス', length: '—', weight: '—', pack: '—' },
+  { no: '855',   name: '剪定鋏（スチールハンドル）',         length: '200mm', weight: '—',    pack: '—' },
+  { no: '877',   name: 'アルミ鍛造剪定鋏',                  length: '190mm', weight: '190g', pack: '—' },
+  { no: 'P-901', name: 'アルミハンドル剪定鋏（テフロン刃）', length: '195mm', weight: '—',    pack: '—' },
 ]
 
 function SpecTable({ rows }) {
@@ -31,7 +31,7 @@ function SpecTable({ rows }) {
 
 export default function Pruners() {
   return (
-    <Section title="剪定鋏" subtitle="果樹・庭木の剪定に欠かせない定番ラインナップ。">
+    <Section title="剪定鋏（アルミ鍛造・アルミハンドル）" subtitle="果樹・庭木の剪定に。鋭い切れ味と耐久性を備えたラインナップ。">
       <SpecTable rows={PRUNERS} />
       <div className="mt-8 grid gap-3 sm:flex">
         <Link to="/contact" className="inline-flex items-center justify-center rounded-xl border px-4 py-2 hover:bg-neutral-50">見積・在庫の問い合わせ</Link>
